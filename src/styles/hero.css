@@ -1,0 +1,131 @@
+/* ================= HERO ================= */
+
+.hero-section {
+  width: 100%;
+  min-height: 500px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  width: 50%;
+  max-width: 520px;
+}
+
+.hero-label {
+  margin: 0 0 18px;
+  color: #23a6f0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.hero-text h1 {
+  margin: 0 0 20px;
+  color: #252b42;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.hero-description {
+  max-width: 400px;
+  margin: 0 0 20px;
+  color: #737373;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hero-price {
+  display: block;
+  margin-bottom: 20px;
+  color: #23856d;
+  font-size: 18px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  background: #23a6f0;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* TABLET  */
+
+@media (max-width: 900px) {
+  .hero-section,
+  .hero-content {
+    min-height: 450px;
+  }
+
+  .hero-text {
+    width: 55%;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+}
+
+/*  MOBILE  */
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 520px;
+    background-position: center;
+  }
+
+  .hero-content {
+    min-height: 520px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 20px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-button {
+    width: auto;
+  }
+}
+
+/*  SMALL MOBILE  */
+
+@media (max-width: 480px) {
+  .hero-section,
+  .hero-content {
+    min-height: 500px;
+  }
+
+  .hero-text {
+    padding: 30px 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+}

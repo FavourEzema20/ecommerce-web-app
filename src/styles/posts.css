@@ -1,0 +1,141 @@
+/* FEATURED POSTS */
+
+.posts-section {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.posts-section .section-heading {
+  text-align: center;
+}
+
+.posts-section .section-heading p {
+  margin: 0 0 10px;
+  color: #23a6f0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.posts-section .section-heading h2 {
+  margin: 0;
+  color: #252b42;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.post-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+}
+
+.post-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 6px 10px;
+  background: #e74040;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.post-content {
+  padding: 25px;
+}
+
+.post-categories {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.post-categories span {
+  color: #737373;
+  font-size: 12px;
+}
+
+.post-categories span:first-child {
+  color: #23a6f0;
+}
+
+.post-content h3 {
+  margin: 0 0 12px;
+  color: #252b42;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.post-content p {
+  margin: 0 0 18px;
+  color: #737373;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  color: #737373;
+  font-size: 11px;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #252b42;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* RESPONSIVE  */
+
+@media (max-width: 900px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .posts-section {
+    padding: 55px 0;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 35px;
+  }
+
+  .post-image {
+    height: 210px;
+  }
+
+  .post-content {
+    padding: 20px;
+  }
+}
