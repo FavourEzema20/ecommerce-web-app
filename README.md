@@ -1,75 +1,187 @@
-# React + TypeScript + Vite
+# E-Commerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive e-commerce landing page built with React, TypeScript, Redux Toolkit, Redux Toolkit Query and Vanilla CSS.
 
-Currently, two official plugins are available:
+This project was built as part of the Learnable Frontend Standardisation Test (LST). The implementation follows the provided Figma design and uses the DummyJSON API for product data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Preview
 
-## React Compiler
+Live Demo: Coming soon
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The Netlify deployment link will be added here after deployment.
 
-## Expanding the ESLint configuration
+## About the Project
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The goal of this project was to recreate the provided e-commerce design as closely as possible while keeping the code clean, reusable and responsive.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The page includes the main sections from the design, product listings, product cards, navigation, services, testimonials, categories and other sections included in the provided design.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The project also includes Redux Toolkit and Redux Toolkit Query for managing application state and fetching product data.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Features
 
-```
+- Responsive e-commerce landing page
+- Product data fetched from DummyJSON
+- Reusable product card component
+- Shopping cart state managed with Redux Toolkit
+- API requests handled with Redux Toolkit Query
+- Cart quantity management
+- Product price and cart total calculations
+- Responsive layouts for mobile, tablet and desktop
+- Loading and error handling for product requests
+- Clean and reusable React components
+- TypeScript throughout the project
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React – UI development
+- TypeScript – Type safety
+- Vite – Development and build tool
+- Vanilla CSS – Styling and responsive design
+- Redux Toolkit – State management
+- Redux Toolkit Query – API integration and data fetching
+- DummyJSON – Product data API
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## API
 
-```
+Product information is fetched from the DummyJSON products API.
+
+The API data is handled through Redux Toolkit Query, which keeps the data fetching logic separate from the UI components and provides caching and request state management.
+
+## Getting Started
+
+If you want to run the project on your own computer, follow these steps.
+
+1. Clone the repository
+
+git clone https://github.com/FavourEzema20/ecommerce-web-app.git
+
+2. Open the project folder
+
+cd ecommerce-web-app
+
+3. Install the dependencies
+
+npm install
+
+4. Start the development server
+
+npm run dev
+
+Vite will provide a local URL in the terminal. Open that URL in your browser to view the application.
+
+## Build
+
+To create a production build, run:
+
+npm run build
+
+To preview the production build locally:
+
+npm run preview
+
+## Project Structure
+
+The project is organized into reusable components, pages, Redux state, API services, types and styles.
+
+src/
+├── app/
+│ ├── hook.ts
+│ └── store.ts
+│
+├── components/
+│ ├── Footer.tsx
+│ ├── Header.tsx
+│ └── ProductCard.tsx
+│
+├── features/
+│ └── cart/
+│ └── cartSlice.ts
+│
+├── pages/
+│ ├── Cart.tsx
+│ ├── Home.tsx
+│ └── Products.tsx
+│
+├── services/
+│ └── productsApi.ts
+│
+├── styles/
+│ ├── cart.css
+│ ├── categories.css
+│ ├── footer.css
+│ ├── global.css
+│ ├── header.css
+│ ├── hero.css
+│ ├── posts.css
+│ ├── products.css
+│ ├── responsive.css
+│ ├── services.css
+│ └── testimonial.css
+│
+└── types/
+└── product.ts
+
+## Responsive Design
+
+The page was built to work across different screen sizes.
+
+The layout adapts for:
+
+- Mobile devices
+- Tablets
+- Laptops
+- Desktop screens
+
+Responsive CSS is used to adjust layouts, spacing, typography and other elements depending on the screen size.
+
+## State Management
+
+Redux Toolkit is used to manage the shopping cart state.
+
+The cart keeps track of selected products and their quantities. Actions are used to add products and update their quantities while the Redux store makes the cart state available across the application.
+
+## API Integration
+
+Redux Toolkit Query is used for fetching product data from DummyJSON.
+
+This keeps the API logic separate from the components and makes it easier to handle loading, successful responses and errors.
+
+## Environment Variables
+
+The current version of the project does not require any environment variables to run because the product API used by the application does not require a private API key.
+
+If environment variables are added in the future, sensitive ".env" files should not be committed to the repository.
+
+## Deployment
+
+The project will be deployed using Netlify.
+
+Live URL: Coming soon
+
+After deployment, the live Netlify URL will be added to this section.
+
+## Development Notes
+
+The main focus of the implementation was to:
+
+- Follow the provided Figma design
+- Keep the interface responsive
+- Use reusable React components
+- Keep state management separate from UI components
+- Use Redux Toolkit Query for API requests
+- Keep the code readable and easy to maintain
+
+## Assessment Scope
+
+For this test, the required submission scope is the e-commerce landing page based on the provided design.
+
+The project also contains supporting product and cart functionality used during development.
+
+## Author
+
+Favour Ezema
+
+Frontend Developer
+
+Built with React, TypeScript, Redux Toolkit and Vanilla CSS.
