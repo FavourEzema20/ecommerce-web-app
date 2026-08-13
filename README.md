@@ -6,9 +6,7 @@ This project was built as part of the Learnable Frontend Standardisation Test (L
 
 ## Preview
 
-Live Demo: Coming soon
-
-The Netlify deployment link will be added here after deployment.
+Live Demo: https://ecommerce-web-appp.netlify.app/
 
 ## About the Project
 
@@ -155,11 +153,9 @@ If environment variables are added in the future, sensitive ".env" files should 
 
 ## Deployment
 
-The project will be deployed using Netlify.
+The project was deployed using Netlify.
 
-Live URL: Coming soon
-
-After deployment, the live Netlify URL will be added to this section.
+Live URL: https://ecommerce-web-appp.netlify.app/
 
 ## Development Notes
 
