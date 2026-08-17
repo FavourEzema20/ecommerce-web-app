@@ -2,7 +2,7 @@
 
 A responsive e-commerce landing page built with React, TypeScript, Redux Toolkit, Redux Toolkit Query and Vanilla CSS.
 
-This project was built as part of the Learnable Frontend Standardisation Test (LST). The implementation follows the provided Figma design and uses the DummyJSON API for product data.
+This project was built as part of the Learnable Standardisation Test (LST) for Frontend Developers. The implementation follows the provided Figma design and uses the DummyJSON API for product data.
 
 ## Preview
 
